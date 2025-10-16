@@ -83,11 +83,7 @@ return {
 						-- replace `enter` with `file_edit` to open all files/bufs whether single or multiple
 						-- replace `enter` with `file_switch_or_edit` to attempt a switch in current tab first
 						["enter"]  = actions.file_edit_or_qf,
-						["ctrl-s"] = actions.file_split,
 						["ctrl-v"] = actions.file_vsplit,
-						["ctrl-t"] = actions.file_tabedit,
-						["alt-q"]  = actions.file_sel_to_qf,
-						["alt-Q"]  = actions.file_sel_to_ll,
 						["alt-i"]  = actions.toggle_ignore,
 						["alt-h"]  = actions.toggle_hidden,
 						["alt-f"]  = actions.toggle_follow,
@@ -308,7 +304,6 @@ return {
 					-- default options are controlled by 'rg|grep_opts'
 					-- cmd            = "rg --vimgrep",
 					grep_opts        = "--binary-files=without-match --line-number --recursive --color=auto --perl-regexp -e",
-					-- You can filter out files like: `query --glob *.yaml` or the like. You can also use live grep :) ctrl-g
 					rg_opts          = "--sort-files --column --line-number --no-heading --with-filename " .. -- if having problesms with performance, remove `--sort-files
 						"--color=never --smart-case --max-columns=4096 -g !.git -e",
 					hidden           = true,                                                   -- disable hidden files by default
@@ -324,6 +319,8 @@ return {
 					-- can still be used when 'false' by calling 'live_grep_glob' directly
 					rg_glob          = true, -- default to glob parsing with `rg`
 					glob_flag        = "--iglob", -- for case sensitive globs use '--glob'
+
+					-- You can filter out files like: `query -- *.yaml !*.conf *.lua` or the like. You can also use live grep :) ctrl-g
 					glob_separator   = "%s%-%-", -- query separator pattern (lua): ' --'
 					-- advanced usage: for custom argument parsing define
 					-- 'rg_glob_fn' to return a pair:
