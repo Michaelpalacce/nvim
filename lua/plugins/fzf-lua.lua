@@ -182,7 +182,7 @@ return {
 				git = {
 					files = {
 						prompt       = 'GitFiles❯ ',
-						cmd          = 'git ls-files --exclude-standard',
+						cmd          = 'git ls-files --exclude-standard --recurse-submodules',
 						multiprocess = true, -- run command in a separate process
 						git_icons    = true, -- show git icons?
 						file_icons   = true, -- show file icons (true|"devicons"|"mini")?
