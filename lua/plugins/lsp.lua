@@ -86,19 +86,19 @@ return {
 					-- Vum/Lua
 					"lua_ls",
 					"vimls",
-					"selene",
+					-- "selene",
 
 					-- Kube
 					"helm_ls",
 
 					-- Scripting
-					"shellcheck",
+					-- "shellcheck",
 					"bashls",
 
 					-- Go
-					"delve",
+					-- "delve",
 					"gopls",
-					"golangci-lint",
+					-- "golangci-lint",
 
 					-- Config Languages
 					"jsonls",

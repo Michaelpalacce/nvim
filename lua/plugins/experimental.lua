@@ -4,7 +4,6 @@ return {
 		version = "*", -- Only update on tagged releases
 		dependencies = {
 			"MunifTanjim/nui.nvim",
-			"OXY2DEV/markview.nvim",
 		},
 		opts = {
 			-- OPTIONAL: Location of user defined tips (default value shown below)
