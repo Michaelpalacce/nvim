@@ -43,7 +43,7 @@ return {
 				sort_by = "case_sensitive",
 				view = {
 					width = {
-						min = 45,
+						min = 25,
 						max = 70
 					}
 				},
