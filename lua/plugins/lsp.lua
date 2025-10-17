@@ -111,7 +111,6 @@ return {
 
 					-- Terraform
 					"tflint",
-					"tfsec",
 					"terraformls",
 				},
 				automatic_enable = true,
