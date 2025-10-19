@@ -25,11 +25,10 @@ return {
 
 					-- Vum/Lua
 					"lua_ls",
-					{ 'vimls',         condition = function() return vim.fn.executable('node') == 1 end },
 					"selene",
 
 					-- Kube
-					"helm_ls",
+					'helm_ls',
 
 					-- Protobufs
 					"buf_ls",
@@ -49,15 +48,15 @@ return {
 					{ 'yamlls',        condition = function() return vim.fn.executable('node') == 1 end },
 					{ 'html',          condition = function() return vim.fn.executable('node') == 1 end },
 					"lemminx", -- xml
-					"hyprls",
+					{ 'hyprls',      condition = function() return vim.fn.executable('hyprctl') == 1 end },
 
 					-- JS/TS
-					{ 'ts_ls', condition = function() return vim.fn.executable('node') == 1 end },
+					{ 'ts_ls',       condition = function() return vim.fn.executable('node') == 1 end },
 
 					-- Terraform
-					"tflint",
-					"tfsec",
-					"terraformls",
+					{ 'tflint',      condition = function() return vim.fn.executable('terraform') == 1 end },
+					{ 'tfsec',       condition = function() return vim.fn.executable('terraform') == 1 end },
+					{ 'terraformls', condition = function() return vim.fn.executable('terraform') == 1 end },
 				},
 
 				-- if set to true this will check each tool for updates. If updates
