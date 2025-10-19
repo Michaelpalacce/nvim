@@ -75,3 +75,8 @@ vim.opt.maxmempattern = 50000
 -- Cmd line
 -- This disables the cmdline
 -- vim.opt.cmdheight = 0
+
+
+-- Optimize file reading
+vim.opt.fsync = false -- disable fsync for faster writes
+vim.opt.swapsync = "" -- disable swap sync
