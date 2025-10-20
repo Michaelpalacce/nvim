@@ -75,3 +75,7 @@ vim.opt.maxmempattern = 50000
 -- Cmd line
 -- This disables the cmdline
 -- vim.opt.cmdheight = 0
+
+-- Project Specific Configruation
+vim.o.exrc = true
+vim.o.secure = true
