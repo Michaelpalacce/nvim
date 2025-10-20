@@ -1,4 +1,5 @@
 return {
+	-- You can use `<a-n> and <a-p> to go back and forth definitions`
 	{
 		'RRethy/vim-illuminate',
 		event = "BufRead",
