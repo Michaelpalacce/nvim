@@ -31,6 +31,16 @@ return {
 					-- Protobufs
 					"buf_ls",
 
+					-- Ansible
+					{ 'ansible-lint', condition = function()
+						return vim.fn.executable('python') == 1 and
+							vim.fn.executable('ansible')
+					end },
+					{ 'ansiblels', condition = function()
+						return vim.fn.executable('node') == 1 and
+							vim.fn.executable('ansible')
+					end },
+
 					-- Scripting
 					"shellcheck",
 					{ 'bashls',        condition = function() return vim.fn.executable('node') == 1 end },
