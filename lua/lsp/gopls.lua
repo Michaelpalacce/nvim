@@ -16,7 +16,7 @@ vim.lsp.config("gopls", {
 			-- report vulnerabilities
 			vulncheck = "Imports",
 			staticcheck = true,
-			gofumpt = true,
+			gofumpt = false,
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,
