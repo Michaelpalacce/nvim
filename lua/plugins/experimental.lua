@@ -12,12 +12,12 @@ return {
 
 			strategies = {
 				chat = {
-					adapter = "ollama",
+					adapter = "openai_compatible",
 				}
 			},
 			adapters = {
 				http = {
-					ollama = function()
+					openai_compatible = function()
 						return require("codecompanion.adapters").extend("openai_compatible", {
 							env = {
 								url = "http://10.1.236.134:1234",
