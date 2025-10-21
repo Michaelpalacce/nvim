@@ -9,7 +9,7 @@
   "codecompanion.nvim": { "branch": "main", "commit": "b1937ad400305860558c0adf6bd10ae7892fff26" },
   "conform.nvim": { "branch": "master", "commit": "235dd79731c1dc51ec04abb4045cbc54727a172a" },
   "fidget.nvim": { "branch": "main", "commit": "3f5475949679953af6d78654db29b944fa826e6a" },
-  "flash.nvim": { "branch": "main", "commit": "2febce67ff9cf7638d2569d17c41af02c38401eb" },
+  "flash.nvim": { "branch": "main", "commit": "bbf222ddf5a720af736853c6c9b1800c998676e3" },
   "fzf-lua": { "branch": "main", "commit": "c102a4eeb10a04ed7e69ce80918923c4175c19d8" },
   "gitsigns.nvim": { "branch": "main", "commit": "20ad4419564d6e22b189f6738116b38871082332" },
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
