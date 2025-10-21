@@ -78,8 +78,9 @@ vim.keymap.set({ "n", "v" }, "B", "^", { noremap = false })
 vim.keymap.set("n", "<leader>ce", ":!chmod +x %<CR>", { noremap = false, silent = true })
 
 pcall(vim.keymap.del, "n", "W")
-vim.keymap.set("n", "W", ":silent w<CR>", { noremap = false, desc = "Write current", silent = true })
-vim.keymap.set("n", "<a-w>", ":silent wa<CR>", { noremap = false, desc = "Write all files", silent = true })
+vim.keymap.set("n", "Wq", ":wq<CR>", { noremap = false, desc = "Write current file and exit", silent = true })
+vim.keymap.set("n", "Wa", ":silent wa<CR>", { noremap = false, desc = "Write all", silent = true })
+vim.keymap.set("n", "Ww", ":w<CR>", { noremap = false, desc = "Write current file", silent = true })
 
 -- Windows
 vim.keymap.set('n', '<C-w>O', '<C-w>o:DelBuffers<CR><CR>',
