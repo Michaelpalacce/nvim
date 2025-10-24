@@ -1,5 +1,8 @@
 return {
-	-- lazy.nvim
+	{
+		"sphamba/smear-cursor.nvim",
+		opts = {},
+	},
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
