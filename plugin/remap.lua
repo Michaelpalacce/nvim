@@ -21,8 +21,11 @@ end, { desc = "R[u]n TSUpdate, MasonUpdate, Lazy" })
 -- General remaps
 ------------------------------------------
 
--- No highlight
-vim.keymap.set("n", "H", "<cmd>noh<CR>", { desc = "Clear [H]ighlights" })
+-- Clear Distractions
+vim.keymap.set("n", "H", function()
+	vim.cmd.noh()
+	vim.cmd.Noice("dismiss")
+end, { desc = "Clear Highlights & Messages" })
 
 -- TMUX
 vim.keymap.set("n", "<leader>st", "<cmd>silent !tmux neww tmux-timer<CR>", { desc = "[S]cripts [T]imer" })
