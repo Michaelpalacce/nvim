@@ -27,7 +27,7 @@ vim.opt.smarttab = true
 vim.opt.smartindent = true
 
 -- Word wrap
-vim.opt.wrap = false
+vim.opt.wrap = true
 -- Break indent will keep the indent of the previous line
 vim.opt.breakindent = true
 
