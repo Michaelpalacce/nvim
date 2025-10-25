@@ -6,7 +6,6 @@ return {
 				-- Display only the file path
 				sources = function(buf, _)
 					local sources = require('dropbar.sources')
-					local utils = require('dropbar.utils')
 					if vim.bo[buf].ft == 'markdown' then
 						return {
 							sources.path,
