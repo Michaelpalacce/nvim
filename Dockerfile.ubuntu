@@ -1,0 +1,10 @@
+FROM ubuntu:24.04
+
+RUN apt update && apt install -y sudo
+
+COPY . /root/.config/nvim
+
+RUN chmod +x /root/.config/nvim/setup-ubuntu.sh && \
+    /root/.config/nvim/setup-ubuntu.sh
+
+SHELL ["bash"]
