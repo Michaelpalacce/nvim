@@ -1,0 +1,10 @@
+FROM archlinux:base
+
+RUN pacman -S --needed --noconfirm sudo && sudo pacman -Syu --noconfirm
+
+COPY . /root/.config/nvim
+
+RUN chmod +x /root/.config/nvim/setup-arch.sh && \
+    /root/.config/nvim/setup-arch.sh
+
+SHELL ["bash"]
