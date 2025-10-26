@@ -4,7 +4,7 @@ RUN apt update && apt install -y sudo
 
 COPY . /root/.config/nvim
 
-RUN chmod +x /root/.config/nvim/setup-ubuntu.sh && \
-    /root/.config/nvim/setup-ubuntu.sh
+RUN chmod +x /root/.config/nvim/setups/setup-ubuntu.sh && \
+    /root/.config/nvim/setups/setup-ubuntu.sh
 
 SHELL ["bash"]
