@@ -50,6 +50,13 @@ return {
 					},
 					opts = { skip = true },
 				},
+				{
+					filter = {
+						warning = true,
+						find = "position_encoding param is required in", -- IDK
+					},
+					opts = { skip = true },
+				},
 			},
 			-- you can enable a preset for easier configuration
 			presets = {
