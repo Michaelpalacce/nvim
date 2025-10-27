@@ -1,5 +1,14 @@
 return {
 	{
+		"rcarriga/nvim-notify",
+		setup = function()
+			-- This fixes a warning
+			require('notify').setup({
+				background_colour = "#000000"
+			})
+		end
+	},
+	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		opts = {
@@ -10,7 +19,36 @@ return {
 					["vim.lsp.util.stylize_markdown"] = true,
 					["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 				},
-				hover = { silent = true }
+				hover = { silent = true },
+
+				progress = {
+					enabled = true,
+					format = "lsp_progress",
+					format_done = "lsp_progress_done",
+					-- throttle = 1000 / 30,
+					view = "notify",
+				},
+			},
+			views = {
+				notify = {
+					replace = true
+				},
+			},
+			routes = {
+				{
+					filter = {
+						error = true,
+						find = "E553", -- Reaching end of quicklist
+					},
+					opts = { skip = true },
+				},
+				{
+					filter = {
+						error = true,
+						find = "E42", -- Error no errors
+					},
+					opts = { skip = true },
+				},
 			},
 			-- you can enable a preset for easier configuration
 			presets = {
@@ -24,6 +62,10 @@ return {
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
 		}
 	},
 }
