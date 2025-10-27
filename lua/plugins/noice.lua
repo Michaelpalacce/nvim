@@ -1,12 +1,13 @@
 return {
 	{
 		"rcarriga/nvim-notify",
-		setup = function()
-			-- This fixes a warning
-			require('notify').setup({
-				background_colour = "#000000"
-			})
-		end
+		opts = {
+			background_colour = "#000000",
+			timeout = 2500,
+			fps = 144,
+			render = "default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
+			stages = "fade"
+		}
 	},
 	{
 		"folke/noice.nvim",
