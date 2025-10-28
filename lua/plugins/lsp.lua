@@ -15,8 +15,9 @@ return {
 			{ 'b0o/schemastore.nvim' }
 		},
 		keys = {
-			{ "<leader>Lr", function() vim.cmd.LspRestart() end, desc = "Reload", },
-			{ "<leader>Li", function() vim.cmd.LspInfo() end,    desc = "Info", },
+			{ "<leader>Lr", function() vim.cmd.LspRestart() end, desc = "[L]SP [R]estart", },
+			{ "<leader>Ls", function() vim.cmd.LspStop() end,    desc = "[L]SP [S]top", },
+			{ "<leader>Li", function() vim.cmd.LspInfo() end,    desc = "[L]SP [I]nfo", },
 		},
 		config = function()
 			-- Remove https://gpanders.com/blog/whats-new-in-neovim-0-11/#more-default-mappings
