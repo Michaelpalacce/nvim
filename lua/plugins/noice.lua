@@ -23,11 +23,7 @@ return {
 				hover = { silent = true },
 
 				progress = {
-					enabled = true,
-					format = "lsp_progress",
-					format_done = "lsp_progress_done",
-					-- throttle = 1000 / 30,
-					view = "notify",
+					enabled = false,
 				},
 			},
 			views = {
