@@ -43,6 +43,13 @@ return {
 				desc = "Fugitive: [G]it [P]ush"
 			},
 			{
+				"<leader>gB",
+				function()
+					vim.cmd.Git('Blame')
+				end,
+				desc = "Fugitive: [G]it [B]lame"
+			},
+			{
 				"<leader>gP",
 				function()
 					vim.cmd.Git('pull --rebase')
