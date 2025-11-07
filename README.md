@@ -19,3 +19,7 @@ The `setups` folder contains the minimal setups required for JUST neovim to work
 
 > [!NOTE]
 > In the future, this will be called in one script and the correct setup should be called.
+
+### Dockerfile notices
+
+- They are purely for testin
