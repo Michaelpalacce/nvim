@@ -1,17 +1,23 @@
 return {
 	{
-		"rcarriga/nvim-notify",
-		opts = {
-			background_colour = "#000000",
-			timeout = 2500,
-			fps = 144,
-			render = "default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
-			stages = "fade"
-		}
-	},
-	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			{
+				"rcarriga/nvim-notify",
+				opts = {
+					background_colour = "NotifyBackground",
+					timeout = 2500,
+					fps = 144,
+					render = "wrapped-default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
+					stages = "static",
+					max_height = 50,
+					max_width = 100,
+				}
+			},
+		},
 		opts = {
 			lsp = {
 				-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -28,7 +34,7 @@ return {
 			},
 			views = {
 				notify = {
-					replace = true
+					replace = true,
 				},
 			},
 			routes = {
@@ -63,13 +69,5 @@ return {
 				lsp_doc_border = true, -- add a border to hover docs and signature help
 			},
 		},
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
-		}
 	},
 }
