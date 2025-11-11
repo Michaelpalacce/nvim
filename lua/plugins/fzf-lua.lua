@@ -177,15 +177,17 @@ return {
 				},
 				git = {
 					files = {
-						prompt       = 'GitFiles❯ ',
-						cmd          = 'git ls-files --exclude-standard --recurse-submodules',
-						multiprocess = true, -- run command in a separate process
-						git_icons    = true, -- show git icons?
-						file_icons   = true, -- show file icons (true|"devicons"|"mini")?
-						color_icons  = true, -- colorize file|git icons
+						prompt                 = 'GitFiles❯ ',
+						cmd                    = 'git ls-files --exclude-standard --recurse-submodules',
+						multiprocess           = true, -- run command in a separate process
+						git_icons              = true, -- show git icons?
+						file_icons             = true, -- show file icons (true|"devicons"|"mini")?
+						color_icons            = true, -- colorize file|git icons
 						-- force display the cwd header line regardless of your current working
 						-- directory can also be used to hide the header when not wanted
-						-- cwd_header = true
+						cwd_prompt             = true,
+						cwd_prompt_shorten_len = 32, -- shorten prompt beyond this length
+						cwd_prompt_shorten_val = 1, -- shortened path parts length
 					},
 					status = {
 						prompt       = 'GitStatus❯ ',
