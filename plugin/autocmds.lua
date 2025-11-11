@@ -12,17 +12,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	end
 })
 
--- You would typically load the session on VimEnter or BufReadPost
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		-- Only load a session if nvim wasn't started with files as arguments
-		if vim.fn.argc() == 0 then
-			require("persistence").load()
-		end
-	end,
-	nested = true, -- Allows other autocmds to run after session is loaded
-})
-
 -- Enable autoread
 vim.opt.autoread = true
 
