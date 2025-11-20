@@ -61,7 +61,7 @@ return {
 						program = "${workspaceFolder}/cmd/controller",
 						args = {
 							"--log-dev",
-							"--log-level=info",
+							"--log-level=debug",
 							"--log-time-encoder=iso8601",
 						},
 					}
