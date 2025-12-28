@@ -15,11 +15,19 @@
 
 ## Setup
 
-The `setups` folder contains the minimal setups required for JUST neovim to work on different systems. 
+Run: 
+```sh
+curl -o- https://raw.githubusercontent.com/Michaelpalacce/nvim/main/setup.sh | bash
+```
 
-> [!NOTE]
-> In the future, this will be called in one script and the correct setup should be called.
+| OS | Supported |
+| -- | --------- |
+| RedHat | ✅ |
+| Debian | ✅ |
+| Arch | ✅ |
+| MacOs | ✅ |
+| Windows | ❌ |
 
 ### Dockerfile notices
 
-- They are purely for testin
+- They are purely for testing
