@@ -60,6 +60,7 @@ return {
 
 					-- JS/TS
 					{ 'ts_ls',       condition = function() return vim.fn.executable('node') == 1 end },
+					{ 'prettierd',   condition = function() return vim.fn.executable('node') == 1 end },
 
 					-- Terraform
 					{ 'tflint',      condition = function() return vim.fn.executable('terraform') == 1 end },
