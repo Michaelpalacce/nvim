@@ -70,7 +70,6 @@ vim.keymap.set("n", "<S-Right>", "<cmd>cclose<CR>zz", { desc = 'Close quickfix' 
 vim.keymap.set("n", "Qa", ":silent qa!<CR>", { noremap = false, desc = "Quit all", silent = true })
 vim.keymap.set({ "n", "v" }, "E", "$", { noremap = false })
 vim.keymap.set({ "n", "v" }, "B", "^", { noremap = false })
-vim.keymap.set("n", "<leader>ce", ":!chmod +x %<CR>", { noremap = false, silent = true })
 
 pcall(vim.keymap.del, "n", "W")
 vim.keymap.set("n", "Wq", ":wq<CR>", { noremap = false, desc = "Write current file and exit", silent = true })

@@ -3,8 +3,7 @@ return {
 		"laytan/cloak.nvim",
 		lazy = false,
 		keys = {
-			{ "<leader>tc", vim.cmd.CloakToggle,      desc = "[T]oggle [C]loak" },
-			{ "<leader>cp", vim.cmd.CloakPreviewLine, desc = "[C]loak [P]review Line" },
+			{ "<leader>tc", vim.cmd.CloakToggle, desc = "[T]oggle [C]loak" },
 		},
 		opts = {
 			enabled = true,
