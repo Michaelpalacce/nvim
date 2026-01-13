@@ -23,6 +23,7 @@ return {
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				typescript = { "prettierd", "prettier", stop_after_first = true },
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+				go = { "golangci-lint", stop_after_first = true },
 			},
 			-- Set up format-on-save
 			format_on_save = defaultFormatOpts,
