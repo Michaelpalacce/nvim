@@ -73,6 +73,7 @@ vim.keymap.set({ "n", "v" }, "B", "^", { noremap = false })
 pcall(vim.keymap.del, "n", "W")
 vim.keymap.set("n", "WA", ":silent wa<CR>", { noremap = false, desc = "Write all", silent = true })
 vim.keymap.set("n", "WW", ":update<CR>", { noremap = false, desc = "Write current file", silent = true })
+vim.keymap.set("n", "WQ", ":wq<CR>", { noremap = false, desc = "Write file and quit", silent = true })
 vim.keymap.set("n", "QQ", ":silent qa!<CR>", { noremap = false, desc = "Quit all", silent = true })
 
 -- Windows
