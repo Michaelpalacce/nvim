@@ -10,7 +10,7 @@ return {
 				opts = {
 					background_colour = "NotifyBackground",
 					top_down = false,
-					timeout = 2500,
+					timeout = 3000,
 					fps = 144,
 					render = "wrapped-default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
 					stages = "static",

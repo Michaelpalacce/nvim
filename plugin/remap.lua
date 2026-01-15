@@ -26,6 +26,11 @@ vim.keymap.set("n", "H", function()
 	vim.cmd.Noice("dismiss")
 end, { desc = "Clear Highlights & Messages" })
 
+vim.keymap.set("n", "<leader>H", function()
+	vim.cmd.noh()
+	vim.cmd.Noice("dismiss")
+end, { desc = "Clear Highlights & Messages" })
+
 -- TMUX
 vim.keymap.set("n", "<leader>st", "<cmd>silent !tmux neww tmux-timer<CR>", { desc = "[S]cripts [T]imer" })
 vim.keymap.set("n", "<leader>sc", "<cmd>silent !tmux neww tmux-cht<CR>", { desc = "[S]cripts [C]heatsheet" })
