@@ -70,7 +70,7 @@ return {
 				{
 					filter = {
 						error = true,
-						find = "Mark has invalid line number", -- When opening Neovim and trying to go back
+						find = "E19: Mark has invalid line number", -- When opening Neovim and trying to go back
 					},
 					opts = { skip = true },
 				},
