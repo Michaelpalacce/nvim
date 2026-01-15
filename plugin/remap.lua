@@ -25,7 +25,6 @@ vim.keymap.set("n", "H", function()
 	vim.cmd.noh()
 	vim.cmd.Noice("dismiss")
 end, { desc = "Clear Highlights & Messages" })
-
 vim.keymap.set("n", "<leader>H", function()
 	vim.cmd.noh()
 	vim.cmd.Noice("dismiss")
