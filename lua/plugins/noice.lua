@@ -40,6 +40,13 @@ return {
 			routes = {
 				{
 					filter = {
+						event = "msg_show",
+						find = "%d+L, %d+B",
+					},
+					opts = { skip = true },
+				},
+				{
+					filter = {
 						error = true,
 						find = "E553", -- Reaching end of quicklist
 					},
@@ -56,6 +63,13 @@ return {
 					filter = {
 						warning = true,
 						find = "position_encoding param is required in", -- IDK
+					},
+					opts = { skip = true },
+				},
+				{
+					filter = {
+						error = true,
+						find = "Mark has invalid line number", -- When opening Neovim and trying to go back
 					},
 					opts = { skip = true },
 				},

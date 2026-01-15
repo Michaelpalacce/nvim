@@ -29,7 +29,7 @@ return {
 
 			-- Open a file when it's created
 			api.events.subscribe(api.events.Event.FileCreated, function(file)
-				vim.cmd("edit " .. file.fname)
+				vim.cmd("edit " .. vim.fn.fnameescape(file.fname))
 			end)
 
 			-- Remap to easily toggle the tree view
@@ -41,18 +41,16 @@ return {
 				respect_buf_cwd = true,
 
 				sort_by = "case_sensitive",
+
 				view = {
-					width = {
-						min = 25,
-						max = 70
-					}
+					adaptive_size = true,
 				},
 				update_focused_file = {
 					enable = true,
 				},
 				diagnostics = {
 					enable = true,
-					show_on_dirs = false,
+					show_on_dirs = true,
 					show_on_open_dirs = true,
 					debounce_delay = 50,
 					severity = {
@@ -68,6 +66,7 @@ return {
 				},
 				renderer = {
 					group_empty = false,
+					indent_width = 1,
 					icons = {
 						webdev_colors = true,
 						git_placement = "before",
@@ -123,7 +122,7 @@ return {
 				git = {
 					enable = true,
 					ignore = false,
-					timeout = 250,
+					timeout = 1000,
 				},
 				on_attach = customAttach,
 			})

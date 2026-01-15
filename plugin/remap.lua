@@ -67,14 +67,13 @@ vim.keymap.set("n", "<S-Left>", "<cmd>copen<CR>zz", { desc = 'Open quickfix' })
 vim.keymap.set("n", "<S-Right>", "<cmd>cclose<CR>zz", { desc = 'Close quickfix' })
 
 -- Files
-vim.keymap.set("n", "Qa", ":silent qa!<CR>", { noremap = false, desc = "Quit all", silent = true })
 vim.keymap.set({ "n", "v" }, "E", "$", { noremap = false })
 vim.keymap.set({ "n", "v" }, "B", "^", { noremap = false })
 
 pcall(vim.keymap.del, "n", "W")
-vim.keymap.set("n", "Wq", ":wq<CR>", { noremap = false, desc = "Write current file and exit", silent = true })
-vim.keymap.set("n", "Wa", ":silent wa<CR>", { noremap = false, desc = "Write all", silent = true })
-vim.keymap.set("n", "Ww", ":w<CR>", { noremap = false, desc = "Write current file", silent = true })
+vim.keymap.set("n", "WA", ":silent wa<CR>", { noremap = false, desc = "Write all", silent = true })
+vim.keymap.set("n", "WW", ":update<CR>", { noremap = false, desc = "Write current file", silent = true })
+vim.keymap.set("n", "QQ", ":silent qa!<CR>", { noremap = false, desc = "Quit all", silent = true })
 
 -- Windows
 vim.keymap.set('n', '<C-w>O', '<C-w>o:DelBuffers<CR><CR>',

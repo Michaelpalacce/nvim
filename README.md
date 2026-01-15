@@ -31,3 +31,7 @@ curl -o- https://raw.githubusercontent.com/Michaelpalacce/nvim/main/setup.sh | b
 ### Dockerfile notices
 
 - They are purely for testing
+
+## TODOS
+
+- [ ] Cannot save buffer fix
