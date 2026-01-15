@@ -9,6 +9,7 @@ return {
 				"rcarriga/nvim-notify",
 				opts = {
 					background_colour = "NotifyBackground",
+					top_down = false,
 					timeout = 2500,
 					fps = 144,
 					render = "wrapped-default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
