@@ -66,6 +66,9 @@ return {
 					{ 'tflint',      condition = function() return vim.fn.executable('terraform') == 1 end },
 					{ 'tfsec',       condition = function() return vim.fn.executable('terraform') == 1 end },
 					{ 'terraformls', condition = function() return vim.fn.executable('terraform') == 1 end },
+
+					-- SQL
+					{ 'sqlls',       condition = function() return vim.fn.executable('node') == 1 end }, -- sqlls requires npm to install..
 				},
 
 				-- if set to true this will check each tool for updates. If updates
