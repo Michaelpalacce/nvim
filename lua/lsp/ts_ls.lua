@@ -7,7 +7,6 @@ local inlayHints = {
 	includeInlayPropertyDeclarationTypeHints = true,
 	includeInlayVariableTypeHints = false,
 }
-
 vim.lsp.config("ts_ls", {
 	settings = {
 		completions = {
@@ -26,5 +25,16 @@ vim.lsp.config("ts_ls", {
 			inlayHints = inlayHints,
 		},
 	},
-	commands = {}
+	commands = {},
+	filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+	init_options = {
+		plugins = {
+			{
+				languages = { "vue" },
+				location = vim.fn.stdpath("data")
+					.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+				name = "@vue/typescript-plugin",
+			},
+		},
+	},
 })
