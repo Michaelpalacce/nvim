@@ -1,15 +1,18 @@
 return {
 	{
 		"TheNoeTrevino/haunt.nvim",
+		-- default config: change to your liking, or remove it to use defaults
+		---@class HauntConfig
 		opts = {
 			sign = "󱙝",
 			sign_hl = "DiagnosticInfo",
-			virt_text_hl = "HauntAnnotation",
+			virt_text_hl = "HauntAnnotation", -- links to DiagnosticVirtualTextHint
 			annotation_prefix = " 󰆉 ",
 			line_hl = nil,
 			virt_text_pos = "eol",
 			data_dir = nil,
-			picker_keys = {
+			picker = "fzf", -- "auto", "snacks", "telescope", or "fzf"
+			picker_keys = { -- picker agnostic, we got you covered
 				delete = { key = "d", mode = { "n" } },
 				edit_annotation = { key = "a", mode = { "n" } },
 			},
@@ -17,6 +20,7 @@ return {
 		-- recommended keymaps, with a helpful prefix alias
 		init = function()
 			local haunt = require("haunt.api")
+			local haunt_picker = require("haunt.picker")
 			local map = vim.keymap.set
 			local prefix = "<leader>m"
 
@@ -37,7 +41,7 @@ return {
 				haunt.delete()
 			end, { desc = "Delete bookmark" })
 
-			map("n", prefix .. "C", function()
+			map("n", prefix .. "D", function()
 				haunt.clear_all()
 			end, { desc = "Delete all bookmarks" })
 
@@ -50,41 +54,9 @@ return {
 				haunt.next()
 			end, { desc = "Next bookmark" })
 
-			local function haunt_fzf_picker()
-				local fzf = require('fzf-lua')
-				local haunt = require('haunt.api')
-				local bookmarks = haunt.get_bookmarks()
-
-				local display_list = {}
-				local lookup = {} -- So we don't have to parse string later
-
-				for _, b in ipairs(bookmarks) do
-					local label = string.format("%s:%d:%d │ %s",
-						b.file, b.line, b.col or 1, b.note or "")
-					table.insert(display_list, label)
-					lookup[label] = b
-				end
-
-				fzf.fzf_exec(display_list, {
-					prompt = 'Boo> ', -- Can be changed if you fanceh
-					previewer = 'builtin', -- This makes it so we have preview, can be removed
-					actions = {
-						['default'] = function(selected)
-							local entry = selected[1]
-							local data = lookup[entry]
-
-							if data then -- Open the file
-								vim.cmd("edit " .. vim.fn.fnameescape(data.file))
-								vim.api.nvim_win_set_cursor(0, { data.line, data.col or 0 })
-							end
-						end
-					}
-				})
-			end
-
-			-- picker (but ont snacks)
+			-- picker
 			map("n", prefix .. "l", function()
-				haunt_fzf_picker()
+				haunt_picker.show({ prompt = "Boo> " })
 			end, { desc = "Show Picker" })
 		end,
 	}
