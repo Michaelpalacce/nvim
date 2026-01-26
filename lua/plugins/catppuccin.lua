@@ -13,7 +13,7 @@ return {
 				},
 				transparent_background = false, -- disables setting the background color.
 				float = {
-					transparent = true, -- enable transparent floating windows
+					transparent = false, -- enable transparent floating windows
 					solid = false,  -- use solid styling for floating windows, see |winborder|
 				},
 				show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
@@ -63,33 +63,29 @@ return {
 				color_overrides = {},
 				custom_highlights = {},
 				default_integrations = true,
-				auto_integrations = false,
+				auto_integrations = true,
 				integrations = {
-					cmp = true,
-					gitsigns = true,
-					nvimtree = true,
-					notify = false,
-					mini = {
-						enabled = true,
-						indentscope_color = "",
-					},
-					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-
-					fidget = true,
-					harpoon = true,
-					treesitter_context = true,
-					fzf = true,
-					mason = true,
-					neotest = true,
-					blink_cmp = true,
-					ufo = true,
-					telescope = {
-						enabled = true,
-					},
-					native_lsp = {
-						enabled = true,
-					},
-					treesitter = true,
+					-- cmp = true,
+					-- gitsigns = true,
+					-- nvimtree = true,
+					-- notify = false,
+					-- -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+					--
+					-- fidget = true,
+					-- harpoon = true,
+					-- treesitter_context = true,
+					-- fzf = true,
+					-- mason = true,
+					-- neotest = true,
+					-- blink_cmp = true,
+					-- ufo = true,
+					-- telescope = {
+					-- 	enabled = true,
+					-- },
+					-- native_lsp = {
+					-- 	enabled = true,
+					-- },
+					-- treesitter = true,
 				},
 			})
 
