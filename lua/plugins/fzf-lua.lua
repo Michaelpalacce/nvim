@@ -54,7 +54,7 @@ return {
 					-- border argument passthrough to nvim_open_win()
 					border     = "rounded",
 					-- Backdrop opacity, 0 is fully opaque, 100 is fully transparent (i.e. disabled)
-					backdrop   = 60,
+					backdrop   = 100,
 					-- title         = "Title",
 					-- title_pos     = "center",        -- 'left', 'center' or 'right'
 					-- title_flags   = false,           -- uncomment to disable title flags
