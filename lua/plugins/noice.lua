@@ -15,7 +15,7 @@ return {
 					render = "wrapped-default", -- https://github.com/rcarriga/nvim-notify?tab=readme-ov-file#render-style
 					stages = "static",
 					max_height = 50,
-					max_width = 100,
+					max_width = 75,
 				}
 			},
 		},
