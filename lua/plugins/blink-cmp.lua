@@ -113,14 +113,14 @@ return {
 				},
 				menu = {
 					border = 'single',
+					max_height = 25, -- Show more items
 					draw = {
 						treesitter = { 'lsp' },
-						columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
+						columns = { { 'item_idx' }, { 'label', 'label_description', gap = 1 }, { 'kind_icon', 'kind', gap = 1 }, },
 						components = {
 							item_idx = {
 								text = function(ctx)
-									return ctx.idx == 10 and '0' or ctx.idx >= 10 and ' ' or
-										tostring(ctx.idx)
+									return tostring(ctx.idx)
 								end,
 								highlight = 'BlinkCmpItemIdx' -- optional, only if you want to change its color
 							},
@@ -232,7 +232,7 @@ return {
 			-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
 			--
 			-- See the fuzzy documentation for more information
-			fuzzy = { implementation = "prefer_rust_with_warning" },
+			fuzzy = { implementation = "prefer_rust" },
 		}
 	}
 }
