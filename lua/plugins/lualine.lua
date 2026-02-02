@@ -28,6 +28,7 @@ return {
 		'nvim-lualine/lualine.nvim', -- Provides a nice status bar at the bottom of the screen
 		dependencies = {
 			-- 'AndreM222/copilot-lualine'
+			{ "yavorski/lualine-macro-recording.nvim" }
 		},
 		opts = {
 			options = {
@@ -35,7 +36,7 @@ return {
 				icons_enabled = true,
 			},
 			sections = {
-				lualine_a = { 'mode' },
+				lualine_a = { 'mode', 'macro_recording' },
 				lualine_b = { 'branch', 'diff', 'diagnostics' },
 				lualine_c = { { 'filename', path = 1, shorting_target = 60 } },
 				lualine_x = {
