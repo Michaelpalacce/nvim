@@ -32,7 +32,7 @@ return {
 		},
 		opts = {
 			options = {
-				theme = "catppuccin",
+				theme = "auto",
 				icons_enabled = true,
 			},
 			sections = {
