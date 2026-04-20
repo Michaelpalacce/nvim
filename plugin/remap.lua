@@ -11,7 +11,6 @@ vim.keymap.set("n", "Q", "<nop>") -- dunno what Q does anyway
 
 -- helpers
 vim.keymap.set('n', "<leader>u", function()
-	vim.cmd.TSUpdate()
 	vim.cmd.MasonUpdate()
 	vim.cmd.Lazy()
 end, { desc = "R[u]n TSUpdate, MasonUpdate, Lazy" })
