@@ -28,3 +28,13 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
 		vim.api.nvim_echo({ { "File changed on disk. Buffer reloaded.", "WarningMsg" } }, false, {})
 	end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = "*",
+	callback = function(args)
+		local ft = vim.bo[args.buf].filetype
+		if vim.treesitter.language.get_lang(ft) then
+			pcall(vim.treesitter.start, args.buf)
+		end
+	end,
+})
