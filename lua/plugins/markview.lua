@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		dependencies = { "saghen/blink.cmp" },
 		keys = {
-			{ "<leader>m", function() vim.cmd.Markview() end, mode = "n", desc = "Toggle [M]arkview", },
+			{ "<leader>M", function() vim.cmd.Markview() end, mode = "n", desc = "Toggle [M]arkview", },
 		},
 	},
 }
