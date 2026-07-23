@@ -16,7 +16,6 @@ return {
 					transparent = false, -- enable transparent floating windows
 					solid = false,  -- use solid styling for floating windows, see |winborder|
 				},
-				show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
 				term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {
 					enabled = false, -- dims the background color of inactive window
@@ -62,8 +61,7 @@ return {
 				},
 				color_overrides = {},
 				custom_highlights = {},
-				default_integrations = true,
-				auto_integrations = false,
+				auto_integrations = true,
 				integrations = {
 					cmp = true,
 					gitsigns = true,
