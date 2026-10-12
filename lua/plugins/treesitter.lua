@@ -1,6 +1,7 @@
 return {
 	{
 		'nvim-treesitter/nvim-treesitter',
+		branch = 'main', -- 'master' is archived and breaks on nvim 0.12
 		lazy = false,
 		build = ':TSUpdate'
 	},
