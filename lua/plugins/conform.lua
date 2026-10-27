@@ -24,6 +24,7 @@ return {
 				typescript = { "prettierd", "prettier", stop_after_first = true },
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				go = { "golangci-lint", "gofumpt", stop_after_first = true },
+				html = { "htmlbeautifier", stop_after_first = true },
 			},
 			-- Set up format-on-save
 			format_on_save = defaultFormatOpts,
